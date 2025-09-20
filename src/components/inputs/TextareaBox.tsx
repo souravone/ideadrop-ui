@@ -1,6 +1,6 @@
 type TextareaBoxProps = {
   htmlFor: string;
-  label: string;
+  label?: string;
   type?: string;
   name: string;
   value: string;

@@ -1,4 +1,4 @@
-import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 import { Lightbulb } from "lucide-react";
 
 export const Route = createFileRoute("/(auth)")({

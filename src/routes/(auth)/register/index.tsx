@@ -19,7 +19,9 @@ function RegisterPage() {
     password: "",
   };
   const [formData, setFormData] = useState(initialFormData);
-  const handleFormChange = (e: React.FormEvent) => {
+  const handleFormChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleSubmit = async (e: React.FormEvent) => {

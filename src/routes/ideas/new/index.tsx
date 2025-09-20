@@ -3,7 +3,7 @@ import InputBox from "@/components/inputs/InputBox";
 import TextareaBox from "@/components/inputs/TextareaBox";
 import { useMutation } from "@tanstack/react-query";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export const Route = createFileRoute("/ideas/new/")({
   component: NewIdeaPage,
@@ -19,7 +19,9 @@ function NewIdeaPage() {
     tags: "",
   };
   const [formData, setFormData] = useState(initialFormData);
-  const handleFormChange = (e) => {
+  const handleFormChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 

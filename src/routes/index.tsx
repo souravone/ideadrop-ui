@@ -1,6 +1,5 @@
 import { fetchIdeas } from "@/api/ideas";
 import IdeaCard from "@/components/IdeaCard";
-import api from "@/lib/axios";
 import type { idea } from "@/types";
 import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -48,7 +47,7 @@ function HomePage() {
             Latest Ideas
           </h2>
           <div className="space-y-6">
-            {ideas.map((idea) => (
+            {ideas.map((idea: idea) => (
               <IdeaCard key={idea._id} idea={idea} button={false} />
             ))}
           </div>
